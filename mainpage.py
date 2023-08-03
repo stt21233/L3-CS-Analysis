@@ -30,7 +30,7 @@ free_throw_success_entry.grid(row=4, column=1)
 free_throw_failed_entry = tk.Entry(frame)
 free_throw_failed_entry.grid(row=5, column=1)
 
-# Create a submit button[[]]
+# Create a submit button
 submit_button = tk.Button(frame, text="Submit", command=submit)
 submit_button.grid(row=6, column=0)
 blocks_entry = tk.Entry(frame)
@@ -42,4 +42,3 @@ def submit():
 blocks_entry.grid(row=0, column=1)
 submit()
 
-#last test
