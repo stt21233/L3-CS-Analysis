@@ -30,14 +30,21 @@ free_throw_success_entry.grid(row=4, column=1)
 free_throw_failed_entry = tk.Entry(frame)
 free_throw_failed_entry.grid(row=5, column=1)
 
-# Create a submit button
-submit_button = tk.Button(frame, text="Submit", command=submit)
-submit_button.grid(row=6, column=0)
-blocks_entry = tk.Entry(frame)
+
 # Create a function to process the data entered by the user
 def submit():
     # Get the data from the input fields
     blocks = blocks_entry.get()
+    turnovers = turnovers_entry.get()
+    steals = steals_entry.get()
+    assists = assists_entry.get()
+    free_throw_success = free_throw_success_entry.get()
+    free_throw_failed = free_throw_failed_entry.get()
+
+# Create a submit button
+submit_button = tk.Button(frame, text="submit", command=submit)
+submit_button.grid(row=6, column=0)
+blocks_entry = tk.Entry(frame)
 
 blocks_entry.grid(row=0, column=1)
 submit()
