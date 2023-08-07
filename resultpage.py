@@ -8,8 +8,20 @@ window.title("Basketball Analysis Results")
 frame = tk.Frame(window)
 frame.pack()
 
+
+#error: attribution table solution.
+
+attribute_table = tk.Attributes()
+attribute_table.add_column("Blocks")
+attribute_table.add_column("Turnovers")
+attribute_table.add_column("Steals")
+attribute_table.add_column("Assists")
+attribute_table.add_column("Free Throw Success")
+attribute_table.add_column("Free Throw Failed")
+
+
 # Create a table and add rows and columns for the data that will be displayed
-table = tk.Table(frame, columns=("Blocks", "Turnovers", "Steals", "Assists", "Free Throw Success", "Free Throw Failed"))
+table = tk.Table(attribute_table)
 table.grid(row=0, column=0)
 
 # Add data to the table
@@ -20,6 +32,8 @@ table.insert(2, ("15", "2", "5", "8", "90%", "10%"))
 # Create a button to close the window
 close_button = tk.Button(frame, text="Close", command=window.destroy)
 close_button.grid(row=1, column=0)
+
+
 
 # Run the mainloop
 window.mainloop()

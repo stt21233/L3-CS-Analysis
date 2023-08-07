@@ -48,4 +48,3 @@ blocks_entry = tk.Entry(frame)
 
 blocks_entry.grid(row=0, column=1)
 submit()
-
