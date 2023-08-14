@@ -84,7 +84,7 @@ blocks_entry = tk.Entry(frame)
 blocks_entry.grid(row=0, column=1)
 
 # set window size
-tk.geometry("500x200")
+window.geometry("500x200")
 
 # Run the mainloop
 window.mainloop()
