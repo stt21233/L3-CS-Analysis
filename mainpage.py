@@ -10,23 +10,23 @@ frame.pack()
 
 # Create a label for each of the input fields
 tk.Label(frame, text="Blocks").grid(row=0, column=0)
-tk.Label(frame, text="Turnovers").grid(row=1, column=0)
+tk.Label(frame, text="Turnovers").grid(row=0, column=1)
 tk.Label(frame, text="Steals").grid(row=2, column=0)
-tk.Label(frame, text="Assists").grid(row=3, column=0)
+tk.Label(frame, text="Assists").grid(row=2, column=1)
 tk.Label(frame, text="Free Throw Success").grid(row=4, column=0)
-tk.Label(frame, text="Free Throw Failed").grid(row=5, column=0)
+tk.Label(frame, text="Free Throw Failed").grid(row=4, column=1)
 
 # Create an entry field for users to enter their data
 blocks_entry = tk.Entry(frame)
-blocks_entry.grid(row=0, column=1)
+blocks_entry.grid(row=1, column=0)
 turnovers_entry = tk.Entry(frame)
 turnovers_entry.grid(row=1, column=1)
 steals_entry = tk.Entry(frame)
-steals_entry.grid(row=2, column=1)
+steals_entry.grid(row=3, column=0)
 assists_entry = tk.Entry(frame)
 assists_entry.grid(row=3, column=1)
 free_throw_success_entry = tk.Entry(frame)
-free_throw_success_entry.grid(row=4, column=1)
+free_throw_success_entry.grid(row=5, column=0)
 free_throw_failed_entry = tk.Entry(frame)
 free_throw_failed_entry.grid(row=5, column=1)
 
@@ -73,15 +73,16 @@ def submit():
     free_throw_success = free_throw_success_entry.get()
     free_throw_failed = free_throw_failed_entry.get()
     
-    display_results(blocks, turnovers, steals, assists, free_throw_success, free_throw_failed)
+    command = display_results(blocks, turnovers, steals, assists, free_throw_success, free_throw_failed)
+
 
 
 # Create a submit button
 submit_button = tk.Button(frame, text="submit", command=submit)
-submit_button.grid(row=6, column=0)
+submit_button.grid(row=6, column=1)
 blocks_entry = tk.Entry(frame)
 
-blocks_entry.grid(row=0, column=1)
+blocks_entry.grid
 
 # set window size
 window.geometry("500x200")
